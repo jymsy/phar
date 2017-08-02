@@ -1,4 +1,3 @@
 <?php
-// index.php
-require __DIR__.'/Foo.class.php';
-$foo = new Foo();
+//vendor
+require_once __DIR__.'/vendor/autoload.php';

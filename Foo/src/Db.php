@@ -5,7 +5,6 @@ use \Illuminate\Database\Capsule\Manager as Capsule;
 class DB
 {
     protected $_capsule;
-    private static $_instance;
 
     private function __construct(array $config)
     {
@@ -25,16 +24,7 @@ class DB
 
     public function setConfig()
     {
-
-    }
-
-    public static function getInstance()
-    {
-        if (!(self::$_instance instanceof self)) {
-            $config = [];
-            self::$_instance = new self($config);
-        }
-        return self::$_instance;
+        Zd::getInstance()->load('goods')->getGoodsInfo();
     }
 
 }
